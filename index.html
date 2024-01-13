@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Solar System</title>
+        <style>
+            body{
+                height: 1500px;
+                width: 1600px;
+                background-image: url("Galaxy.jpg");
+                background-size: cover ;
+                background-repeat: no-repeat;
+            }
+            .sun{
+                height: 100px;
+                width: 100px;
+                background-image: url("Sun.png");
+                background-size: contain;
+                margin-top: 750px;
+                margin-left: 1500px;
+                position: relative;
+            }
+            .mercury{
+                height: 40px;
+                width: 40px;
+                border-radius: 40px;
+                background-image: url("Mercury.png");
+                background-size: contain;
+                position: absolute;
+                bottom: 7px;
+                right: -60px;
+                transform-origin: -75px 0px;
+                animation-name:meranim;
+                animation-duration: 7s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;    
+                /* animation-play-state: paused;             */
+            }
+            @keyframes meranim{
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            .venus{
+                height: 50px;
+                width: 50px;
+                background-image: url("Venus.png");
+                background-size: contain;
+                position: absolute;
+                bottom: 0px;
+                right: -136px;
+                transform-origin: -140px 0px;
+                animation-name: venanim;
+                animation-duration: 9s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /* animation-play-state: paused; */
+            }
+            @keyframes venanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+
+            .earth{
+                height: 70px;
+                width: 70px;
+                background-image: url("Earth.png");
+                background-size: contain;
+                position: absolute;
+                right: -235px;
+                bottom: 10px;
+                transform-origin: -220px 30px;
+                animation-name: earanim;
+                animation-duration: 11s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /* animation-play-state: paused; */
+            }
+            @keyframes earanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            
+            .moon{
+                height: 20px;
+                width: 20px;
+                background-image: url("Moon.png");
+                background-size: contain;
+                position: absolute;
+                right: -30px;
+                bottom: 0px;
+                transform-origin: -45px -10px;
+                animation-name: moonanim;
+                animation-duration: 6s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes moonanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            } 
+            
+            .mars{
+                height: 30px;
+                width: 30px;
+                background-image: url("Mars.png");
+                background-size: contain;
+                position: absolute;
+                right: -320px;
+                bottom: 0px;
+                transform-origin: -335px -20px;
+                animation-name: marsanim;
+                animation-duration: 13s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /* animation-play-state: paused; */
+            }
+            @keyframes marsanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            
+            .jupiter{
+                height: 80px;
+                width: 80px;
+                background-image: url("Jupiter.png");
+                background-size: contain;
+                position: absolute;
+                right: -430px;
+                bottom: 0px;
+                transform-origin: -400px 25px;
+                animation-name: jupanim;
+                animation-duration: 17s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /* animation-play-state: paused; */
+            }
+            @keyframes jupanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            
+            .saturn{
+                height: 70px;
+                width: 70px;
+                background-image: url("Saturn.png");
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                right: -530px;
+                bottom: 30px;
+                transform-origin: -510px 40px;
+                animation-name: satanim;
+                animation-duration: 20s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /* animation-play-state: paused; */
+            }
+            @keyframes satanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            
+            .uranus{
+                height: 45px;
+                width: 45px;
+                background-image: url("Uranus.png");
+                background-size: contain;   
+                position: absolute;
+                right: -600px;
+                transform-origin: -610px 40px;
+                animation-name: uraanim;
+                animation-duration: 23s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /* animation-play-state: paused; */
+            }
+            @keyframes uraanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            
+            .neptune{
+                height: 40px;
+                width: 40px;
+                background-image: url("Neptune.png");
+                background-size: contain;
+                position: absolute;
+                right: -670px;
+                transform-origin: -690px 40px;
+                animation-name: nepanim;
+                animation-duration: 25s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                /* animation-play-state: paused; */
+            }
+            @keyframes nepanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            
+            .pluto{
+                height: 20px;
+                width: 20px;
+                background-image: url("Pluto.png");
+                background-size: contain;
+                position: absolute;
+                right: -720px;
+                transform-origin: -760px 40px;
+                animation-name: pluanim;
+                animation-duration: 27s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+            }
+            @keyframes pluanim {
+                0%{
+                    transform: rotateZ(0deg);
+                }
+                100%{
+                    transform: rotateZ(359deg);
+                }
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="sun">
+            <div class="mercury"></div>
+            <div class="venus"></div>
+
+            <div class="earth">
+                <div class="moon"></div>
+            </div>
+
+            <div class="mars"></div>
+            <div class="jupiter"></div>
+            <div class="saturn"></div>
+            <div class="uranus"></div>
+            <div class="neptune"></div>
+            <div class="pluto"></div>
+        </div>
+    </body>
+</html>
